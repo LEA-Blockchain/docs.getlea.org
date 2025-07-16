@@ -1,0 +1,510 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="Rspress v1.45.0">
+    <title data-rh="true">LEA Chain</title><meta data-rh="true" name="description" content="Technical Documentation for LEA Chain"/>
+  <script>{;const saved = localStorage.getItem('rspress-theme-appearance');const preferDark = window.matchMedia('(prefers-color-scheme: dark)').matches;const isDark = !saved || saved === 'auto' ? preferDark : saved === 'dark';document.documentElement.classList.toggle('dark', isDark);document.documentElement.style.colorScheme = isDark ? 'dark' : 'light';}</script><link rel="icon" href="/logo.png"><script defer src="/static/js/styles.560c21a5.js"></script><script defer src="/static/js/lib-react.1eeaa575.js"></script><script defer src="/static/js/lib-router.2a966dcf.js"></script><script defer src="/static/js/162.2c681a9d.js"></script><script defer src="/static/js/index.ec1e672e.js"></script><link href="/static/css/styles.e45a8283.css" rel="stylesheet"></head>
+
+  <body >
+    <div id="root"><div class="navContainer_d18b1 rspress-nav px-6  sticky_ddfa7"><div class="container_e4235 flex justify-between items-center h-full"><div class="navBarTitle_c5f07"><a href="/index.html" class="link_a7cea flex items-center w-full h-full text-base font-semibold transition-opacity duration-300 hover:opacity-60"><div class="mr-1 min-w-8"><img src="/logo.png" alt="logo" id="logo" class="rspress-logo dark:hidden"/><img src="/logo.png" alt="logo" id="logo" class="rspress-logo hidden dark:block"/></div></a></div><div class="flex flex-1 justify-end items-center"><div class="rightNav_a2fea"><div class="flex sm:flex-1 items-center sm:pl-4 sm:pr-2"><div class="rspress-nav-search-button navSearchButton_df1fb"><button><svg width="18" height="18" viewBox="0 0 32 32"><path fill="var(--rp-c-gray)" d="m29 27.586-7.552-7.552a11.018 11.018 0 1 0-1.414 1.414L27.586 29ZM4 13a9 9 0 1 1 9 9 9.01 9.01 0 0 1-9-9"></path></svg><p class="searchWord_af2c1">Search Docs</p><div style="opacity:0"><span></span><span>K</span></div></button></div><div class="mobileNavSearchButton_d85a9"><svg width="24" height="24" viewBox="0 0 32 32"><path fill="var(--rp-c-gray)" d="m29 27.586-7.552-7.552a11.018 11.018 0 1 0-1.414 1.414L27.586 29ZM4 13a9 9 0 1 1 9 9 9.01 9.01 0 0 1-9-9"></path></svg></div></div><div class="rspress-nav-menu menu h-14"><a href="/index.html" class="link_a7cea "><div class="rspress-nav-menu-item singleItem_c1154 activeItem_a28b5 text-sm font-medium mx-0.5 px-3 py-2 flex items-center">Home</div></a><a href="/guide.html" class="link_a7cea "><div class="rspress-nav-menu-item singleItem_c1154  text-sm font-medium mx-0.5 px-3 py-2 flex items-center">Guide</div></a><a href="/lips/index.html" class="link_a7cea "><div class="rspress-nav-menu-item singleItem_c1154 activeItem_a28b5 text-sm font-medium mx-0.5 px-3 py-2 flex items-center">LIPs</div></a><a href="/npm-module/index.html" class="link_a7cea "><div class="rspress-nav-menu-item singleItem_c1154  text-sm font-medium mx-0.5 px-3 py-2 flex items-center">NPM Module</div></a><a href="/tools/index.html" class="link_a7cea "><div class="rspress-nav-menu-item singleItem_c1154  text-sm font-medium mx-0.5 px-3 py-2 flex items-center">Tools</div></a><a href="/development/index.html" class="link_a7cea "><div class="rspress-nav-menu-item singleItem_c1154  text-sm font-medium mx-0.5 px-3 py-2 flex items-center">Development</div></a></div><div class="flex-center flex-row"><div class="mx-2"><div class="md:mr-2 rspress-nav-appearance"><div class="p-1 border border-solid border-gray-300 text-gray-400  cursor-pointer rounded-md hover:border-gray-600 hover:text-gray-600 dark:hover:border-gray-200 dark:hover:text-gray-200 transition-all duration-300 w-7 h-7"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 24 24" class="dark:hidden" width="18" height="18" fill="currentColor"><path d="M12 18c-3.3 0-6-2.7-6-6s2.7-6 6-6 6 2.7 6 6-2.7 6-6 6m0-10c-2.2 0-4 1.8-4 4s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4M12 4c-.6 0-1-.4-1-1V1c0-.6.4-1 1-1s1 .4 1 1v2c0 .6-.4 1-1 1M12 24c-.6 0-1-.4-1-1v-2c0-.6.4-1 1-1s1 .4 1 1v2c0 .6-.4 1-1 1M5.6 6.6c-.3 0-.5-.1-.7-.3L3.5 4.9c-.4-.4-.4-1 0-1.4s1-.4 1.4 0l1.4 1.4c.4.4.4 1 0 1.4-.1.2-.4.3-.7.3M19.8 20.8c-.3 0-.5-.1-.7-.3l-1.4-1.4c-.4-.4-.4-1 0-1.4s1-.4 1.4 0l1.4 1.4c.4.4.4 1 0 1.4-.2.2-.5.3-.7.3M3 13H1c-.6 0-1-.4-1-1s.4-1 1-1h2c.6 0 1 .4 1 1s-.4 1-1 1M23 13h-2c-.6 0-1-.4-1-1s.4-1 1-1h2c.6 0 1 .4 1 1s-.4 1-1 1M4.2 20.8c-.3 0-.5-.1-.7-.3-.4-.4-.4-1 0-1.4l1.4-1.4c.4-.4 1-.4 1.4 0s.4 1 0 1.4l-1.4 1.4c-.2.2-.4.3-.7.3M18.4 6.6c-.3 0-.5-.1-.7-.3-.4-.4-.4-1 0-1.4l1.4-1.4c.4-.4 1-.4 1.4 0s.4 1 0 1.4l-1.4 1.4c-.2.2-.5.3-.7.3"></path></svg><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 24 24" class="hidden dark:block" width="18" height="18" fill="currentColor"><path d="M12.1 22h-.9c-5.5-.5-9.5-5.4-9-10.9.4-4.8 4.2-8.6 9-9 .4 0 .8.2 1 .5s.2.8-.1 1.1c-2 2.7-1.4 6.4 1.3 8.4 2.1 1.6 5 1.6 7.1 0 .3-.2.7-.3 1.1-.1.3.2.5.6.5 1-.2 2.7-1.5 5.1-3.6 6.8-1.9 1.4-4.1 2.2-6.4 2.2M9.3 4.4c-2.9 1-5 3.6-5.2 6.8-.4 4.4 2.8 8.3 7.2 8.7 2.1.2 4.2-.4 5.8-1.8 1.1-.9 1.9-2.1 2.4-3.4-2.5.9-5.3.5-7.5-1.1-2.8-2.2-3.9-5.9-2.7-9.2"></path></svg></div></div></div><div class="social-links menu-item_e90a6 flex-center relative"><div class="flex-center h-full gap-x-4 transition-colors duration-300 md:mr-2"><a href="https://github.com/web-infra-dev/rspress" target="_blank" rel="noopener noreferrer" class="social-links"><div class="social-links-icon_a4ad0"><div><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 24 24"><path fill="currentColor" d="M12 .297c-6.63 0-12 5.373-12 12c0 5.303 3.438 9.8 8.205 11.385c.6.113.82-.258.82-.577c0-.285-.01-1.04-.015-2.04c-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729c1.205.084 1.838 1.236 1.838 1.236c1.07 1.835 2.809 1.305 3.495.998c.108-.776.417-1.305.76-1.605c-2.665-.3-5.466-1.332-5.466-5.93c0-1.31.465-2.38 1.235-3.22c-.135-.303-.54-1.523.105-3.176c0 0 1.005-.322 3.3 1.23c.96-.267 1.98-.399 3-.405c1.02.006 2.04.138 3 .405c2.28-1.552 3.285-1.23 3.285-1.23c.645 1.653.24 2.873.12 3.176c.765.84 1.23 1.91 1.23 3.22c0 4.61-2.805 5.625-5.475 5.92c.42.36.81 1.096.81 2.22c0 1.606-.015 2.896-.015 3.286c0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></div></div></a></div></div></div></div><div class="mobileNavMenu_e7045"><div class="navScreen_ec30c  rspress-nav-screen" id="navScreen"><div class="container_c935d"><div class="navMenu_b887b"><div class="navMenuItem_e7978 w-full"><a href="/index.html" class="link_a7cea "><div class="rspress-nav-menu-item singleItem_c1154 activeItem_a28b5 text-sm font-medium mx-1.5 px-3 py-2 flex items-center">Home</div></a></div><div class="navMenuItem_e7978 w-full"><a href="/guide.html" class="link_a7cea "><div class="rspress-nav-menu-item singleItem_c1154  text-sm font-medium mx-1.5 px-3 py-2 flex items-center">Guide</div></a></div><div class="navMenuItem_e7978 w-full"><a href="/lips/index.html" class="link_a7cea "><div class="rspress-nav-menu-item singleItem_c1154 activeItem_a28b5 text-sm font-medium mx-1.5 px-3 py-2 flex items-center">LIPs</div></a></div><div class="navMenuItem_e7978 w-full"><a href="/npm-module/index.html" class="link_a7cea "><div class="rspress-nav-menu-item singleItem_c1154  text-sm font-medium mx-1.5 px-3 py-2 flex items-center">NPM Module</div></a></div><div class="navMenuItem_e7978 w-full"><a href="/tools/index.html" class="link_a7cea "><div class="rspress-nav-menu-item singleItem_c1154  text-sm font-medium mx-1.5 px-3 py-2 flex items-center">Tools</div></a></div><div class="navMenuItem_e7978 w-full"><a href="/development/index.html" class="link_a7cea "><div class="rspress-nav-menu-item singleItem_c1154  text-sm font-medium mx-1.5 px-3 py-2 flex items-center">Development</div></a></div></div><div class="flex-center flex-col gap-2"><div class="mt-2 navAppearance_bf893 flex justify-center"></div><div class="social-links menu-item_e90a6 flex-center relative"><div class="flex-center h-full gap-x-4 transition-colors duration-300 md:mr-2"><a href="https://github.com/web-infra-dev/rspress" target="_blank" rel="noopener noreferrer" class="social-links"><div class="social-links-icon_a4ad0"><div><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 24 24"><path fill="currentColor" d="M12 .297c-6.63 0-12 5.373-12 12c0 5.303 3.438 9.8 8.205 11.385c.6.113.82-.258.82-.577c0-.285-.01-1.04-.015-2.04c-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729c1.205.084 1.838 1.236 1.838 1.236c1.07 1.835 2.809 1.305 3.495.998c.108-.776.417-1.305.76-1.605c-2.665-.3-5.466-1.332-5.466-5.93c0-1.31.465-2.38 1.235-3.22c-.135-.303-.54-1.523.105-3.176c0 0 1.005-.322 3.3 1.23c.96-.267 1.98-.399 3-.405c1.02.006 2.04.138 3 .405c2.28-1.552 3.285-1.23 3.285-1.23c.645 1.653.24 2.873.12 3.176c.765.84 1.23 1.91 1.23 3.22c0 4.61-2.805 5.625-5.475 5.92c.42.36.81 1.096.81 2.22c0 1.606-.015 2.896-.015 3.286c0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></div></div></a></div></div></div></div></div><button aria-label="mobile hamburger" class=" rspress-mobile-hamburger navHamburger_ac64c text-gray-500"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="currentColor"><circle cx="8" cy="16" r="2" fill="currentColor"></circle><circle cx="16" cy="16" r="2" fill="currentColor"></circle><circle cx="24" cy="16" r="2" fill="currentColor"></circle></svg></button></div></div></div></div><section><div class="docLayout_af141 pt-0"><aside class="sidebar_dd719 rspress-sidebar "><div class="navTitleMask_fb17c"><div class="navBarTitle_c5f07"><a href="/index.html" class="link_a7cea flex items-center w-full h-full text-base font-semibold transition-opacity duration-300 hover:opacity-60"><div class="mr-1 min-w-8"><img src="/logo.png" alt="logo" id="logo" class="rspress-logo dark:hidden"/><img src="/logo.png" alt="logo" id="logo" class="rspress-logo hidden dark:block"/></div></a></div></div><div class="rspress-scrollbar sidebarContent_da296"><nav class="pb-2"><a href="/lips/index.html" class="link_a7cea menuLink_bb039"><div class="menuItem_ac22e mt-0.5 py-2 px-3 font-medium flex" style="font-size:14px;margin-left:0;border-radius:0 var(--rp-radius) var(--rp-radius) 0;padding-left:24px;font-weight:bold"><span>LIPs Index</span></div></a><section class="rspress-sidebar-section mt-0.5 block" style="margin-left:0"><div class="rspress-sidebar-collapse flex justify-between items-center menuItem_ac22e" style="border-radius:0 var(--rp-radius) var(--rp-radius) 0;cursor:pointer"><h2 class="py-2 px-3 text-sm font-medium flex" style="font-size:14px;padding-left:24px;font-weight:bold"><span class="flex-center" style="font-size:14px">Meta/Process</span></h2><div class="collapseContainer_d6e4e p-2 rounded-xl"><div style="cursor:pointer;transition:transform 0.2s ease-out;transform:rotate(90deg)"><svg width="1em" height="1em" viewBox="0 0 32 32"><path fill="currentColor" d="M22 16 12 26l-1.4-1.4 8.6-8.6-8.6-8.6L12 6z"></path></svg></div></div></div><div class="transition-all duration-300 ease-in-out" style="overflow:hidden"><div class="rspress-sidebar-group transition-opacity duration-500 ease-in-out" style="opacity:1;margin-left:12px"><div class="rspress-sidebar-item"><a href="/lips/LIP-0003.html" class="link_a7cea menuLink_bb039"><div class="menuItem_ac22e mt-0.5 py-2 px-3 font-medium flex" style="font-size:13px;margin-left:18px;border-radius:0 var(--rp-radius) var(--rp-radius) 0"><span>LIP-0003: LIP Structure and Process</span></div></a></div></div></div></section><section class="rspress-sidebar-section mt-0.5 block" style="margin-left:0"><div class="rspress-sidebar-collapse flex justify-between items-center menuItem_ac22e" style="border-radius:0 var(--rp-radius) var(--rp-radius) 0;cursor:pointer"><h2 class="py-2 px-3 text-sm font-medium flex" style="font-size:14px;padding-left:24px;font-weight:bold"><span class="flex-center" style="font-size:14px">Core Encoding</span></h2><div class="collapseContainer_d6e4e p-2 rounded-xl"><div style="cursor:pointer;transition:transform 0.2s ease-out;transform:rotate(90deg)"><svg width="1em" height="1em" viewBox="0 0 32 32"><path fill="currentColor" d="M22 16 12 26l-1.4-1.4 8.6-8.6-8.6-8.6L12 6z"></path></svg></div></div></div><div class="transition-all duration-300 ease-in-out" style="overflow:hidden"><div class="rspress-sidebar-group transition-opacity duration-500 ease-in-out" style="opacity:1;margin-left:12px"><div class="rspress-sidebar-item"><a href="/lips/LIP-0006.html" class="link_a7cea menuLink_bb039"><div class="menuItem_ac22e mt-0.5 py-2 px-3 font-medium flex" style="font-size:13px;margin-left:18px;border-radius:0 var(--rp-radius) var(--rp-radius) 0"><span>LIP-0006: Replace Core Transaction Encoding (CTE) with Simple Compact Transaction Protocol (SCTP)</span></div></a></div></div></div></section><section class="rspress-sidebar-section mt-0.5 block" style="margin-left:0"><div class="rspress-sidebar-collapse flex justify-between items-center menuItem_ac22e" style="border-radius:0 var(--rp-radius) var(--rp-radius) 0;cursor:pointer"><h2 class="py-2 px-3 text-sm font-medium flex" style="font-size:14px;padding-left:24px;font-weight:bold"><span class="flex-center" style="font-size:14px">Application</span></h2><div class="collapseContainer_d6e4e p-2 rounded-xl"><div style="cursor:pointer;transition:transform 0.2s ease-out;transform:rotate(90deg)"><svg width="1em" height="1em" viewBox="0 0 32 32"><path fill="currentColor" d="M22 16 12 26l-1.4-1.4 8.6-8.6-8.6-8.6L12 6z"></path></svg></div></div></div><div class="transition-all duration-300 ease-in-out" style="overflow:hidden"><div class="rspress-sidebar-group transition-opacity duration-500 ease-in-out" style="opacity:1;margin-left:12px"><div class="rspress-sidebar-item"><a href="/lips/LIP-0007.html" class="link_a7cea menuLink_bb039"><div class="menuItem_ac22e mt-0.5 py-2 px-3 font-medium flex" style="font-size:13px;margin-left:18px;border-radius:0 var(--rp-radius) var(--rp-radius) 0"><span>LIP-0007: Genesis LEA Transaction Decoder Format</span></div></a></div><div class="rspress-sidebar-item"><a href="/lips/LIP-0008.html" class="link_a7cea menuLink_bb039"><div class="menuItem_ac22e mt-0.5 py-2 px-3 font-medium flex" style="font-size:13px;margin-left:18px;border-radius:0 var(--rp-radius) var(--rp-radius) 0"><span>LIP-0008: LEA WebAssembly VM&#x27;s Supported Features</span></div></a></div></div></div></section></nav></div></aside><div class="flex-1 relative min-w-0"><div class="rspress-sidebar-menu-container "><div class="rspress-sidebar-menu"><button type="button" class="flex-center mr-auto"><div class="text-md mr-2"><svg width="1em" height="1em" viewBox="0 0 32 32"><path fill="currentColor" d="M4 6h24v2H4zm0 18h24v2H4zm0-12h24v2H4zm0 6h24v2H4z"></path></svg></div><span class="text-sm">Menu</span></button><button type="button" class="flex-center ml-auto"><span class="text-sm">ON THIS PAGE</span><div class="text-md mr-2" style="transform:rotate(0deg);transition:transform 0.2s ease-out;margin-top:2px"><svg width="1em" height="1em" viewBox="0 0 32 32"><path fill="currentColor" d="M22 16 12 26l-1.4-1.4 8.6-8.6-8.6-8.6L12 6z"></path></svg></div></button><div class="rspress-local-toc-container "><ul><li><a href="#abstract" class="link_a7cea rspress-toc-link sm:text-normal text-sm" style="margin-left:0"><span class="rspress-toc-link-text block">Abstract</span></a></li><li><a href="#motivation" class="link_a7cea rspress-toc-link sm:text-normal text-sm" style="margin-left:0"><span class="rspress-toc-link-text block">Motivation</span></a></li><li><a href="#specification" class="link_a7cea rspress-toc-link sm:text-normal text-sm" style="margin-left:0"><span class="rspress-toc-link-text block">Specification</span></a></li><li><a href="#43-index-and-extended-data-field-ixdata-field-tag-10" class="link_a7cea rspress-toc-link sm:text-normal text-sm" style="margin-left:12px"><span class="rspress-toc-link-text block">4.3. Index and Extended Data Field (IxData Field) (Tag <code>10</code>)</span></a></li><li><a href="#431-sub-type-00-legacy-index-reference" class="link_a7cea rspress-toc-link sm:text-normal text-sm" style="margin-left:24px"><span class="rspress-toc-link-text block">4.3.1. Sub-Type <code>00</code>: Legacy Index Reference</span></a></li><li><a href="#432-sub-type-01-variable-length-encoded-integer-varint" class="link_a7cea rspress-toc-link sm:text-normal text-sm" style="margin-left:24px"><span class="rspress-toc-link-text block">4.3.2. Sub-Type <code>01</code>: Variable-Length Encoded Integer (Varint)</span></a></li><li><a href="#433-sub-type-10-fixed-data-type" class="link_a7cea rspress-toc-link sm:text-normal text-sm" style="margin-left:24px"><span class="rspress-toc-link-text block">4.3.3. Sub-Type <code>10</code>: Fixed Data Type</span></a></li><li><a href="#434-sub-type-11-single-byte-constantmarker" class="link_a7cea rspress-toc-link sm:text-normal text-sm" style="margin-left:24px"><span class="rspress-toc-link-text block">4.3.4. Sub-Type <code>11</code>: Single-Byte Constant/Marker</span></a></li><li><a href="#rationale" class="link_a7cea rspress-toc-link sm:text-normal text-sm" style="margin-left:0"><span class="rspress-toc-link-text block">Rationale</span></a></li><li><a href="#backwards-compatibility" class="link_a7cea rspress-toc-link sm:text-normal text-sm" style="margin-left:0"><span class="rspress-toc-link-text block">Backwards Compatibility</span></a></li><li><a href="#security-considerations" class="link_a7cea rspress-toc-link sm:text-normal text-sm" style="margin-left:0"><span class="rspress-toc-link-text block">Security Considerations</span></a></li><li><a href="#copyright" class="link_a7cea rspress-toc-link sm:text-normal text-sm" style="margin-left:0"><span class="rspress-toc-link-text block">Copyright</span></a></li></ul></div></div></div><div class="content_ff766 rspress-doc-container flex"><div class="flex-1 overflow-x-auto"><div class="rspress-doc"><!--$--><ul class="list-disc pl-5 my-4 leading-7">
+<li class="[&amp;:not(:first-child)]:mt-2"><strong class="font-semibold">LIP: 1</strong></li>
+<li class="[&amp;:not(:first-child)]:mt-2"><strong class="font-semibold">Layer: Core Encoding</strong></li>
+<li class="[&amp;:not(:first-child)]:mt-2"><strong class="font-semibold">Title: Extend Tag 10 for Sub-Typed Data (IxData Field)</strong></li>
+<li class="[&amp;:not(:first-child)]:mt-2"><strong class="font-semibold">Author: Allwin Ketnawang</strong></li>
+<li class="[&amp;:not(:first-child)]:mt-2"><strong class="font-semibold">Created: 2025-04-27</strong></li>
+<li class="[&amp;:not(:first-child)]:mt-2"><strong class="font-semibold">Superseded-By: 6</strong></li>
+<li class="[&amp;:not(:first-child)]:mt-2"><strong class="font-semibold">Status: Replaced</strong></li>
+</ul>
+<h2 id="abstract" class="mt-12 mb-6 pt-8 text-2xl tracking-tight border-t-[1px] border-divider-light title_fb7eb">Abstract<a class="link_a7cea header-anchor link_a9ef4 inline-link_f855c" aria-hidden="true" href="#abstract">#</a></h2>
+<p class="my-4 leading-7">This LIP proposes replacing the original CTE v1.0 Tag <code>10</code> &quot;Index Reference&quot; field with a more versatile structure named the &quot;Index and Extended Data Field&quot; (or &quot;IxData Field&quot; for short). This new structure utilizes the previously reserved bits 1-0 of the header byte to introduce four sub-types, enabling the efficient encoding of: legacy 4-bit indices, standard variable-length integers (ULEB128/SLEB128), common fixed-size data types (integers, floats), and single-byte constants (including booleans). This enhances the expressiveness and efficiency of the CTE format.</p>
+<h2 id="motivation" class="mt-12 mb-6 pt-8 text-2xl tracking-tight border-t-[1px] border-divider-light title_fb7eb">Motivation<a class="link_a7cea header-anchor link_a9ef4 inline-link_f855c" aria-hidden="true" href="#motivation">#</a></h2>
+<p class="my-4 leading-7">The original CTE v1.0 specification defined the Tag <code>10</code> field solely as a 1-byte reference containing a 4-bit index (0-15) into preceding key or signature lists. While useful, this is limiting. Applications built on CTE often require encoding other fundamental data types compactly, such as:</p>
+<ol class="list-decimal pl-5 my-4 leading-7">
+<li class="[&amp;:not(:first-child)]:mt-2">Integers larger than 15 or needing variable-length encoding for efficiency.</li>
+<li class="[&amp;:not(:first-child)]:mt-2">Signed integers.</li>
+<li class="[&amp;:not(:first-child)]:mt-2">Standard fixed-size types like <code>int32</code>, <code>uint64</code>, <code>float</code>, and <code>double</code> without the overhead of the generic <code>Command Data</code> field.</li>
+<li class="[&amp;:not(:first-child)]:mt-2">Atomic boolean values (<code>true</code>/<code>false</code>) or other single-byte markers (like <code>null</code>) in a highly compact, unambiguous way.</li>
+</ol>
+<p class="my-4 leading-7">This proposal addresses these needs by repurposing the Tag <code>10</code> field. By using the two previously reserved bits (1-0) as a sub-type selector, we can introduce multiple data formats under a single tag, significantly increasing the utility and efficiency of the CTE format while maintaining partial backwards compatibility for the original index reference use case.</p>
+<h2 id="specification" class="mt-12 mb-6 pt-8 text-2xl tracking-tight border-t-[1px] border-divider-light title_fb7eb">Specification<a class="link_a7cea header-anchor link_a9ef4 inline-link_f855c" aria-hidden="true" href="#specification">#</a></h2>
+<p class="my-4 leading-7">This LIP replaces Section 4.3 of the CTE v1.0 specification document entirely with the following:</p>
+<hr class="my-12 border-t border-solid border-divider-light"/>
+<h3 id="43-index-and-extended-data-field-ixdata-field-tag-10" class="mt-10 mb-2 leading-7 text-xl title_fb7eb">4.3. Index and Extended Data Field (IxData Field) (Tag <code>10</code>)<a class="link_a7cea header-anchor link_a9ef4 inline-link_f855c" aria-hidden="true" href="#43-index-and-extended-data-field-ixdata-field-tag-10">#</a></h3>
+<ul class="list-disc pl-5 my-4 leading-7">
+<li class="[&amp;:not(:first-child)]:mt-2"><strong class="font-semibold">Tag:</strong> <code>10</code></li>
+<li class="[&amp;:not(:first-child)]:mt-2"><strong class="font-semibold">Purpose:</strong> Encodes different types of data including simple list indices, variable-length integers using standard encodings, standard fixed-size data types, and single-byte constants or markers.</li>
+<li class="[&amp;:not(:first-child)]:mt-2"><strong class="font-semibold">Identification:</strong> Fields of this type are identified by the Tag <code>10</code> in bits 7-6 of the header byte. The specific interpretation and format are determined by the <strong class="font-semibold">Sub-Type</strong> field located in bits 1-0 (<code>SS</code>) of the header byte.</li>
+<li class="[&amp;:not(:first-child)]:mt-2"><strong class="font-semibold">General Header Byte Structure:</strong>
+<table class="block border-collapse text-base my-5 overflow-x-auto leading-7 border-gray-light-3 dark:border-divider">
+<thead>
+<tr class="border border-solid transition-colors duration-500 even:bg-soft border-gray-light-3 dark:border-divider">
+<th align="left" class="border border-solid px-4 py-2 text-text-1 text-base font-semibold border-gray-light-3 dark:border-divider">Bits</th>
+<th align="left" class="border border-solid px-4 py-2 text-text-1 text-base font-semibold border-gray-light-3 dark:border-divider">Field</th>
+<th align="left" class="border border-solid px-4 py-2 text-text-1 text-base font-semibold border-gray-light-3 dark:border-divider">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="border border-solid transition-colors duration-500 even:bg-soft border-gray-light-3 dark:border-divider">
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider">7-6</td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider">Tag (<code>10</code>)</td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider">Identifies this as the IxData Field family.</td>
+</tr>
+<tr class="border border-solid transition-colors duration-500 even:bg-soft border-gray-light-3 dark:border-divider">
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider">5-2</td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider">Sub-Data (<code>XXXX</code>)</td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider">4-bit value whose meaning depends on the Sub-Type (<code>SS</code>) field.</td>
+</tr>
+<tr class="border border-solid transition-colors duration-500 even:bg-soft border-gray-light-3 dark:border-divider">
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider">1-0</td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider">Sub-Type (<code>SS</code>)</td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider">Determines the format and interpretation (<code>00</code>, <code>01</code>, <code>10</code>, <code>11</code>).</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="[&amp;:not(:first-child)]:mt-2"><strong class="font-semibold">Endianness Note:</strong> Unless otherwise specified, all multi-byte numerical data within CTE v1.1 fields (including sub-types defined below and Command Data) MUST be encoded using <strong class="font-semibold">Little-Endian</strong> byte order. LEB128 encodings follow their own standard byte order.</li>
+</ul>
+<hr class="my-12 border-t border-solid border-divider-light"/>
+<h4 id="431-sub-type-00-legacy-index-reference" class="mt-8 leading-6 text-lg title_fb7eb">4.3.1. Sub-Type <code>00</code>: Legacy Index Reference<a class="link_a7cea header-anchor link_a9ef4 inline-link_f855c" aria-hidden="true" href="#431-sub-type-00-legacy-index-reference">#</a></h4>
+<ul class="list-disc pl-5 my-4 leading-7">
+<li class="[&amp;:not(:first-child)]:mt-2"><strong class="font-semibold">Sub-Type Code (<code>SS</code>):</strong> <code>00</code></li>
+<li class="[&amp;:not(:first-child)]:mt-2"><strong class="font-semibold">Purpose:</strong> Provides a zero-based index referencing an item within the preceding <code>Public Key List</code> (Section 4.1) or <code>Signature List</code> (Section 4.2). The context determines which list is being referenced. This maintains compatibility with CTE v1.0.</li>
+<li class="[&amp;:not(:first-child)]:mt-2"><strong class="font-semibold">Format:</strong>
+<ul class="list-disc pl-5 my-4 leading-7">
+<li class="[&amp;:not(:first-child)]:mt-2"><strong class="font-semibold">Header Byte:</strong> <code>10 IIII 00</code>
+<table class="block border-collapse text-base my-5 overflow-x-auto leading-7 border-gray-light-3 dark:border-divider">
+<thead>
+<tr class="border border-solid transition-colors duration-500 even:bg-soft border-gray-light-3 dark:border-divider">
+<th align="left" class="border border-solid px-4 py-2 text-text-1 text-base font-semibold border-gray-light-3 dark:border-divider">Bits</th>
+<th align="left" class="border border-solid px-4 py-2 text-text-1 text-base font-semibold border-gray-light-3 dark:border-divider">Field</th>
+<th align="left" class="border border-solid px-4 py-2 text-text-1 text-base font-semibold border-gray-light-3 dark:border-divider">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="border border-solid transition-colors duration-500 even:bg-soft border-gray-light-3 dark:border-divider">
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider">7-6</td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider">Tag (<code>10</code>)</td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider">IxData Field family.</td>
+</tr>
+<tr class="border border-solid transition-colors duration-500 even:bg-soft border-gray-light-3 dark:border-divider">
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider">5-2</td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider">Index (<code>IIII</code>)</td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider">The 4-bit index value (0-15).</td>
+</tr>
+<tr class="border border-solid transition-colors duration-500 even:bg-soft border-gray-light-3 dark:border-divider">
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider">1-0</td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider">Sub-Type (<code>00</code>)</td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider">Specifies Legacy Index Reference format.</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="[&amp;:not(:first-child)]:mt-2"><strong class="font-semibold">Data:</strong> No following data bytes.</li>
+</ul>
+</li>
+<li class="[&amp;:not(:first-child)]:mt-2"><strong class="font-semibold">Constraints:</strong> The Index value (<code>IIII</code>) MUST correspond to a valid position within the relevant list.</li>
+<li class="[&amp;:not(:first-child)]:mt-2"><strong class="font-semibold">Total Size:</strong> 1 byte.</li>
+<li class="[&amp;:not(:first-child)]:mt-2"><strong class="font-semibold">Reserved Values:</strong> None within this sub-type.</li>
+<li class="[&amp;:not(:first-child)]:mt-2"><strong class="font-semibold">Example (Reference Index 5):</strong> Header Byte: <code>10 0101 00</code> = <code>0x94</code></li>
+</ul>
+<hr class="my-12 border-t border-solid border-divider-light"/>
+<h4 id="432-sub-type-01-variable-length-encoded-integer-varint" class="mt-8 leading-6 text-lg title_fb7eb">4.3.2. Sub-Type <code>01</code>: Variable-Length Encoded Integer (Varint)<a class="link_a7cea header-anchor link_a9ef4 inline-link_f855c" aria-hidden="true" href="#432-sub-type-01-variable-length-encoded-integer-varint">#</a></h4>
+<ul class="list-disc pl-5 my-4 leading-7">
+<li class="[&amp;:not(:first-child)]:mt-2"><strong class="font-semibold">Sub-Type Code (<code>SS</code>):</strong> <code>01</code></li>
+<li class="[&amp;:not(:first-child)]:mt-2"><strong class="font-semibold">Purpose:</strong> Encodes a signed or unsigned integer value using standard variable-length encoding schemes (LEB128) or represents the value 0 directly.</li>
+<li class="[&amp;:not(:first-child)]:mt-2"><strong class="font-semibold">Format:</strong>
+<ul class="list-disc pl-5 my-4 leading-7">
+<li class="[&amp;:not(:first-child)]:mt-2"><strong class="font-semibold">Header Byte:</strong> <code>10 EEEE 01</code>
+<table class="block border-collapse text-base my-5 overflow-x-auto leading-7 border-gray-light-3 dark:border-divider">
+<thead>
+<tr class="border border-solid transition-colors duration-500 even:bg-soft border-gray-light-3 dark:border-divider">
+<th align="left" class="border border-solid px-4 py-2 text-text-1 text-base font-semibold border-gray-light-3 dark:border-divider">Bits</th>
+<th align="left" class="border border-solid px-4 py-2 text-text-1 text-base font-semibold border-gray-light-3 dark:border-divider">Field</th>
+<th align="left" class="border border-solid px-4 py-2 text-text-1 text-base font-semibold border-gray-light-3 dark:border-divider">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="border border-solid transition-colors duration-500 even:bg-soft border-gray-light-3 dark:border-divider">
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider">7-6</td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider">Tag (<code>10</code>)</td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider">IxData Field family.</td>
+</tr>
+<tr class="border border-solid transition-colors duration-500 even:bg-soft border-gray-light-3 dark:border-divider">
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider">5-2</td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider">Encoding Scheme (<code>EEEE</code>)</td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider">Specifies the encoding method or direct value (see table below).</td>
+</tr>
+<tr class="border border-solid transition-colors duration-500 even:bg-soft border-gray-light-3 dark:border-divider">
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider">1-0</td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider">Sub-Type (<code>01</code>)</td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider">Specifies Varint format.</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="[&amp;:not(:first-child)]:mt-2"><strong class="font-semibold">Data:</strong> For LEB128 schemes, followed by the bytes constituting the variable-length encoded integer according to the relevant standard. The number of data bytes is determined by the LEB128 encoding itself (via continuation bits).</li>
+</ul>
+</li>
+<li class="[&amp;:not(:first-child)]:mt-2"><strong class="font-semibold">Encoding Schemes (<code>EEEE</code>):</strong>
+<table class="block border-collapse text-base my-5 overflow-x-auto leading-7 border-gray-light-3 dark:border-divider">
+<thead>
+<tr class="border border-solid transition-colors duration-500 even:bg-soft border-gray-light-3 dark:border-divider">
+<th align="left" class="border border-solid px-4 py-2 text-text-1 text-base font-semibold border-gray-light-3 dark:border-divider"><code>EEEE</code> (Bin)</th>
+<th align="left" class="border border-solid px-4 py-2 text-text-1 text-base font-semibold border-gray-light-3 dark:border-divider"><code>EEEE</code> (Dec)</th>
+<th align="left" class="border border-solid px-4 py-2 text-text-1 text-base font-semibold border-gray-light-3 dark:border-divider">Header Byte (Hex)</th>
+<th align="left" class="border border-solid px-4 py-2 text-text-1 text-base font-semibold border-gray-light-3 dark:border-divider">Encoding Scheme / Value</th>
+<th align="left" class="border border-solid px-4 py-2 text-text-1 text-base font-semibold border-gray-light-3 dark:border-divider">Notes</th>
+<th align="left" class="border border-solid px-4 py-2 text-text-1 text-base font-semibold border-gray-light-3 dark:border-divider">Size (Bytes)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="border border-solid transition-colors duration-500 even:bg-soft border-gray-light-3 dark:border-divider">
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider"><code>0000</code></td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider">0</td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider"><code>0x81</code></td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider">Value <code>0</code></td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider">Represents the integer value 0 directly.</td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider">1 (Header only)</td>
+</tr>
+<tr class="border border-solid transition-colors duration-500 even:bg-soft border-gray-light-3 dark:border-divider">
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider"><code>0001</code></td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider">1</td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider"><code>0x85</code></td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider">ULEB128</td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider">Unsigned LEB128 encoded integer data follows.</td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider">1 + Data Length</td>
+</tr>
+<tr class="border border-solid transition-colors duration-500 even:bg-soft border-gray-light-3 dark:border-divider">
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider"><code>0010</code></td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider">2</td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider"><code>0x89</code></td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider">SLEB128</td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider">Signed LEB128 encoded integer data follows.</td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider">1 + Data Length</td>
+</tr>
+<tr class="border border-solid transition-colors duration-500 even:bg-soft border-gray-light-3 dark:border-divider">
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider"><code>0011</code></td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider">3</td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider"><code>0x8D</code></td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider"><strong class="font-semibold">Reserved</strong></td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider">For future variable-length encoding schemes.</td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider">-</td>
+</tr>
+<tr class="border border-solid transition-colors duration-500 even:bg-soft border-gray-light-3 dark:border-divider">
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider">...</td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider">...</td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider">...</td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider">...</td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider">(Codes 3-15 are Reserved)</td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider">...</td>
+</tr>
+<tr class="border border-solid transition-colors duration-500 even:bg-soft border-gray-light-3 dark:border-divider">
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider"><code>1111</code></td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider">15</td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider"><code>0xBD</code></td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider"><strong class="font-semibold">Reserved</strong></td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider">For future variable-length encoding schemes.</td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider">-</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="[&amp;:not(:first-child)]:mt-2"><strong class="font-semibold">Constraints:</strong>
+<ul class="list-disc pl-5 my-4 leading-7">
+<li class="[&amp;:not(:first-child)]:mt-2">Decoders MUST correctly implement ULEB128 and SLEB128 decoding.</li>
+<li class="[&amp;:not(:first-child)]:mt-2">While LEB128 can encode arbitrarily large integers, implementations MAY impose practical limits based on transaction size constraints or application needs (e.g., limiting to 64-bit or 128-bit range).</li>
+</ul>
+</li>
+<li class="[&amp;:not(:first-child)]:mt-2"><strong class="font-semibold">Total Size:</strong> 1 byte for value 0; <code>1 + Length(LEB128 Data)</code> bytes otherwise.</li>
+<li class="[&amp;:not(:first-child)]:mt-2"><strong class="font-semibold">Reserved Values:</strong> Encoding scheme codes 3 through 15 are reserved.</li>
+<li class="[&amp;:not(:first-child)]:mt-2"><strong class="font-semibold">Example 1 (Value 300 / <code>0x12C</code> using ULEB128):</strong>
+<ul class="list-disc pl-5 my-4 leading-7">
+<li class="[&amp;:not(:first-child)]:mt-2">ULEB128 requires 2 data bytes: <code>0xAC, 0x02</code>. <code>EEEE</code> = <code>0001</code>.</li>
+<li class="[&amp;:not(:first-child)]:mt-2">Header Byte: <code>10 0001 01</code> = <code>0x85</code></li>
+<li class="[&amp;:not(:first-child)]:mt-2">Following Data: <code>0xAC</code>, <code>0x02</code></li>
+</ul>
+</li>
+<li class="[&amp;:not(:first-child)]:mt-2"><strong class="font-semibold">Example 2 (Value -100 using SLEB128):</strong>
+<ul class="list-disc pl-5 my-4 leading-7">
+<li class="[&amp;:not(:first-child)]:mt-2">SLEB128 requires 2 data bytes: <code>0x9C, 0x7F</code>. <code>EEEE</code> = <code>0010</code>.</li>
+<li class="[&amp;:not(:first-child)]:mt-2">Header Byte: <code>10 0010 01</code> = <code>0x89</code></li>
+<li class="[&amp;:not(:first-child)]:mt-2">Following Data: <code>0x9C</code>, <code>0x7F</code></li>
+</ul>
+</li>
+</ul>
+<hr class="my-12 border-t border-solid border-divider-light"/>
+<h4 id="433-sub-type-10-fixed-data-type" class="mt-8 leading-6 text-lg title_fb7eb">4.3.3. Sub-Type <code>10</code>: Fixed Data Type<a class="link_a7cea header-anchor link_a9ef4 inline-link_f855c" aria-hidden="true" href="#433-sub-type-10-fixed-data-type">#</a></h4>
+<ul class="list-disc pl-5 my-4 leading-7">
+<li class="[&amp;:not(:first-child)]:mt-2"><strong class="font-semibold">Sub-Type Code (<code>SS</code>):</strong> <code>10</code></li>
+<li class="[&amp;:not(:first-child)]:mt-2"><strong class="font-semibold">Purpose:</strong> Encodes a value belonging to a standard, fixed-size data type identified by a type code.</li>
+<li class="[&amp;:not(:first-child)]:mt-2"><strong class="font-semibold">Format:</strong>
+<ul class="list-disc pl-5 my-4 leading-7">
+<li class="[&amp;:not(:first-child)]:mt-2"><strong class="font-semibold">Header Byte:</strong> <code>10 TTTT 10</code>
+<table class="block border-collapse text-base my-5 overflow-x-auto leading-7 border-gray-light-3 dark:border-divider">
+<thead>
+<tr class="border border-solid transition-colors duration-500 even:bg-soft border-gray-light-3 dark:border-divider">
+<th align="left" class="border border-solid px-4 py-2 text-text-1 text-base font-semibold border-gray-light-3 dark:border-divider">Bits</th>
+<th align="left" class="border border-solid px-4 py-2 text-text-1 text-base font-semibold border-gray-light-3 dark:border-divider">Field</th>
+<th align="left" class="border border-solid px-4 py-2 text-text-1 text-base font-semibold border-gray-light-3 dark:border-divider">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="border border-solid transition-colors duration-500 even:bg-soft border-gray-light-3 dark:border-divider">
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider">7-6</td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider">Tag (<code>10</code>)</td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider">IxData Field family.</td>
+</tr>
+<tr class="border border-solid transition-colors duration-500 even:bg-soft border-gray-light-3 dark:border-divider">
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider">5-2</td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider">Type Code (<code>TTTT</code>)</td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider">Specifies the fixed data type (see table below).</td>
+</tr>
+<tr class="border border-solid transition-colors duration-500 even:bg-soft border-gray-light-3 dark:border-divider">
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider">1-0</td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider">Sub-Type (<code>10</code>)</td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider">Specifies Fixed Data Type format.</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="[&amp;:not(:first-child)]:mt-2"><strong class="font-semibold">Data:</strong> Followed by the number of bytes corresponding to the specified Type Code. Data is encoded in Little-Endian byte order where applicable (multi-byte integers, floats).</li>
+</ul>
+</li>
+<li class="[&amp;:not(:first-child)]:mt-2"><strong class="font-semibold">Type Codes (<code>TTTT</code>):</strong>
+<table class="block border-collapse text-base my-5 overflow-x-auto leading-7 border-gray-light-3 dark:border-divider">
+<thead>
+<tr class="border border-solid transition-colors duration-500 even:bg-soft border-gray-light-3 dark:border-divider">
+<th align="left" class="border border-solid px-4 py-2 text-text-1 text-base font-semibold border-gray-light-3 dark:border-divider"><code>TTTT</code> (Bin)</th>
+<th align="left" class="border border-solid px-4 py-2 text-text-1 text-base font-semibold border-gray-light-3 dark:border-divider"><code>TTTT</code> (Dec)</th>
+<th align="left" class="border border-solid px-4 py-2 text-text-1 text-base font-semibold border-gray-light-3 dark:border-divider">Data Type</th>
+<th align="left" class="border border-solid px-4 py-2 text-text-1 text-base font-semibold border-gray-light-3 dark:border-divider">Size (Bytes)</th>
+<th align="left" class="border border-solid px-4 py-2 text-text-1 text-base font-semibold border-gray-light-3 dark:border-divider">Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr class="border border-solid transition-colors duration-500 even:bg-soft border-gray-light-3 dark:border-divider">
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider"><code>0000</code></td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider">0</td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider"><code>int8_t</code></td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider">1</td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider">Signed 8-bit integer</td>
+</tr>
+<tr class="border border-solid transition-colors duration-500 even:bg-soft border-gray-light-3 dark:border-divider">
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider"><code>0001</code></td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider">1</td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider"><code>int16_t</code></td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider">2</td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider">Signed 16-bit integer</td>
+</tr>
+<tr class="border border-solid transition-colors duration-500 even:bg-soft border-gray-light-3 dark:border-divider">
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider"><code>0010</code></td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider">2</td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider"><code>int32_t</code></td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider">4</td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider">Signed 32-bit integer</td>
+</tr>
+<tr class="border border-solid transition-colors duration-500 even:bg-soft border-gray-light-3 dark:border-divider">
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider"><code>0011</code></td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider">3</td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider"><code>int64_t</code></td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider">8</td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider">Signed 64-bit integer</td>
+</tr>
+<tr class="border border-solid transition-colors duration-500 even:bg-soft border-gray-light-3 dark:border-divider">
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider"><code>0100</code></td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider">4</td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider"><code>uint8_t</code></td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider">1</td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider">Unsigned 8-bit integer</td>
+</tr>
+<tr class="border border-solid transition-colors duration-500 even:bg-soft border-gray-light-3 dark:border-divider">
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider"><code>0101</code></td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider">5</td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider"><code>uint16_t</code></td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider">2</td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider">Unsigned 16-bit integer</td>
+</tr>
+<tr class="border border-solid transition-colors duration-500 even:bg-soft border-gray-light-3 dark:border-divider">
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider"><code>0110</code></td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider">6</td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider"><code>uint32_t</code></td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider">4</td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider">Unsigned 32-bit integer</td>
+</tr>
+<tr class="border border-solid transition-colors duration-500 even:bg-soft border-gray-light-3 dark:border-divider">
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider"><code>0111</code></td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider">7</td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider"><code>uint64_t</code></td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider">8</td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider">Unsigned 64-bit integer</td>
+</tr>
+<tr class="border border-solid transition-colors duration-500 even:bg-soft border-gray-light-3 dark:border-divider">
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider"><code>1000</code></td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider">8</td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider"><code>float</code></td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider">4</td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider">IEEE 754 Single-Precision</td>
+</tr>
+<tr class="border border-solid transition-colors duration-500 even:bg-soft border-gray-light-3 dark:border-divider">
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider"><code>1001</code></td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider">9</td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider"><code>double</code></td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider">8</td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider">IEEE 754 Double-Precision</td>
+</tr>
+<tr class="border border-solid transition-colors duration-500 even:bg-soft border-gray-light-3 dark:border-divider">
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider"><code>1010</code></td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider">10</td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider"><strong class="font-semibold">Reserved</strong></td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider">-</td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider">For future use</td>
+</tr>
+<tr class="border border-solid transition-colors duration-500 even:bg-soft border-gray-light-3 dark:border-divider">
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider">...</td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider">...</td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider">...</td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider">...</td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider">(Codes 10-15 are Reserved)</td>
+</tr>
+<tr class="border border-solid transition-colors duration-500 even:bg-soft border-gray-light-3 dark:border-divider">
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider"><code>1111</code></td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider">15</td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider"><strong class="font-semibold">Reserved</strong></td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider">-</td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider">For future use</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="[&amp;:not(:first-child)]:mt-2"><strong class="font-semibold">Constraints:</strong> The data following the header MUST match the size and format required by the specified Type Code.</li>
+<li class="[&amp;:not(:first-child)]:mt-2"><strong class="font-semibold">Total Size:</strong> <code>1 + Size(Type[TTTT])</code> bytes.</li>
+<li class="[&amp;:not(:first-child)]:mt-2"><strong class="font-semibold">Reserved Values:</strong> Type codes 10 through 15 are reserved.</li>
+<li class="[&amp;:not(:first-child)]:mt-2"><strong class="font-semibold">Example (Value -100 as <code>int16_t</code>):</strong>
+<ul class="list-disc pl-5 my-4 leading-7">
+<li class="[&amp;:not(:first-child)]:mt-2">-100 is <code>0xFF9C</code> (Little-Endian: <code>9C FF</code>). <code>TTTT</code> = <code>0001</code>.</li>
+<li class="[&amp;:not(:first-child)]:mt-2">Header Byte: <code>10 0001 10</code> = <code>0x86</code></li>
+<li class="[&amp;:not(:first-child)]:mt-2">Following Data: <code>0x9C</code>, <code>0xFF</code></li>
+</ul>
+</li>
+</ul>
+<hr class="my-12 border-t border-solid border-divider-light"/>
+<h4 id="434-sub-type-11-single-byte-constantmarker" class="mt-8 leading-6 text-lg title_fb7eb">4.3.4. Sub-Type <code>11</code>: Single-Byte Constant/Marker<a class="link_a7cea header-anchor link_a9ef4 inline-link_f855c" aria-hidden="true" href="#434-sub-type-11-single-byte-constantmarker">#</a></h4>
+<ul class="list-disc pl-5 my-4 leading-7">
+<li class="[&amp;:not(:first-child)]:mt-2"><strong class="font-semibold">Sub-Type Code (<code>SS</code>):</strong> <code>11</code></li>
+<li class="[&amp;:not(:first-child)]:mt-2"><strong class="font-semibold">Purpose:</strong> Encodes specific predefined constant values (like boolean <code>true</code>/<code>false</code>) or semantic markers using only a single byte. The meaning is determined directly by the Value Code.</li>
+<li class="[&amp;:not(:first-child)]:mt-2"><strong class="font-semibold">Format:</strong>
+<ul class="list-disc pl-5 my-4 leading-7">
+<li class="[&amp;:not(:first-child)]:mt-2"><strong class="font-semibold">Header Byte:</strong> <code>10 XXXX 11</code> (The header byte <em>is</em> the entire field)<!-- -->
+<table class="block border-collapse text-base my-5 overflow-x-auto leading-7 border-gray-light-3 dark:border-divider">
+<thead>
+<tr class="border border-solid transition-colors duration-500 even:bg-soft border-gray-light-3 dark:border-divider">
+<th align="left" class="border border-solid px-4 py-2 text-text-1 text-base font-semibold border-gray-light-3 dark:border-divider">Bits</th>
+<th align="left" class="border border-solid px-4 py-2 text-text-1 text-base font-semibold border-gray-light-3 dark:border-divider">Field</th>
+<th align="left" class="border border-solid px-4 py-2 text-text-1 text-base font-semibold border-gray-light-3 dark:border-divider">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="border border-solid transition-colors duration-500 even:bg-soft border-gray-light-3 dark:border-divider">
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider">7-6</td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider">Tag (<code>10</code>)</td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider">IxData Field family.</td>
+</tr>
+<tr class="border border-solid transition-colors duration-500 even:bg-soft border-gray-light-3 dark:border-divider">
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider">5-2</td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider">Value Code (<code>XXXX</code>)</td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider">Specifies the constant or marker value (0-15).</td>
+</tr>
+<tr class="border border-solid transition-colors duration-500 even:bg-soft border-gray-light-3 dark:border-divider">
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider">1-0</td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider">Sub-Type (<code>11</code>)</td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider">Specifies Single-Byte Constant/Marker format.</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="[&amp;:not(:first-child)]:mt-2"><strong class="font-semibold">Data:</strong> No following data bytes.</li>
+</ul>
+</li>
+<li class="[&amp;:not(:first-child)]:mt-2"><strong class="font-semibold">Value Codes (<code>XXXX</code>):</strong>
+<table class="block border-collapse text-base my-5 overflow-x-auto leading-7 border-gray-light-3 dark:border-divider">
+<thead>
+<tr class="border border-solid transition-colors duration-500 even:bg-soft border-gray-light-3 dark:border-divider">
+<th align="left" class="border border-solid px-4 py-2 text-text-1 text-base font-semibold border-gray-light-3 dark:border-divider"><code>XXXX</code> (Bin)</th>
+<th align="left" class="border border-solid px-4 py-2 text-text-1 text-base font-semibold border-gray-light-3 dark:border-divider"><code>XXXX</code> (Dec)</th>
+<th align="left" class="border border-solid px-4 py-2 text-text-1 text-base font-semibold border-gray-light-3 dark:border-divider">Header Byte (Hex)</th>
+<th align="left" class="border border-solid px-4 py-2 text-text-1 text-base font-semibold border-gray-light-3 dark:border-divider">Defined Meaning</th>
+<th align="left" class="border border-solid px-4 py-2 text-text-1 text-base font-semibold border-gray-light-3 dark:border-divider">Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr class="border border-solid transition-colors duration-500 even:bg-soft border-gray-light-3 dark:border-divider">
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider"><code>0000</code></td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider">0</td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider"><code>0x83</code></td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider"><code>false</code></td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider">Boolean false value</td>
+</tr>
+<tr class="border border-solid transition-colors duration-500 even:bg-soft border-gray-light-3 dark:border-divider">
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider"><code>0001</code></td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider">1</td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider"><code>0x87</code></td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider"><code>true</code></td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider">Boolean true value</td>
+</tr>
+<tr class="border border-solid transition-colors duration-500 even:bg-soft border-gray-light-3 dark:border-divider">
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider"><code>0010</code></td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider">2</td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider"><code>0x8B</code></td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider"><strong class="font-semibold">Reserved</strong></td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider">For future use</td>
+</tr>
+<tr class="border border-solid transition-colors duration-500 even:bg-soft border-gray-light-3 dark:border-divider">
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider">...</td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider">...</td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider">...</td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider">...</td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider">(Codes 2-15 are Reserved)</td>
+</tr>
+<tr class="border border-solid transition-colors duration-500 even:bg-soft border-gray-light-3 dark:border-divider">
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider"><code>1111</code></td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider">15</td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider"><code>0xBF</code></td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider"><strong class="font-semibold">Reserved</strong></td>
+<td align="left" class="border border-solid px-4 py-2 border-gray-light-3 dark:border-divider">e.g., For Null, Separator</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="[&amp;:not(:first-child)]:mt-2"><strong class="font-semibold">Constraints:</strong> Implementations should recognize the defined constant values.</li>
+<li class="[&amp;:not(:first-child)]:mt-2"><strong class="font-semibold">Total Size:</strong> 1 byte.</li>
+<li class="[&amp;:not(:first-child)]:mt-2"><strong class="font-semibold">Reserved Values:</strong> Value codes 2 through 15 are reserved for future standard constants or markers.</li>
+<li class="[&amp;:not(:first-child)]:mt-2"><strong class="font-semibold">Example (Representing <code>false</code>):</strong> The single byte <code>10 0000 11</code> = <code>0x83</code> is used.</li>
+</ul>
+<hr class="my-12 border-t border-solid border-divider-light"/>
+<h2 id="rationale" class="mt-12 mb-6 pt-8 text-2xl tracking-tight border-t-[1px] border-divider-light title_fb7eb">Rationale<a class="link_a7cea header-anchor link_a9ef4 inline-link_f855c" aria-hidden="true" href="#rationale">#</a></h2>
+<ul class="list-disc pl-5 my-4 leading-7">
+<li class="[&amp;:not(:first-child)]:mt-2"><strong class="font-semibold">Sub-Typing:</strong> Utilizing the two previously reserved bits (1-0) of the Tag <code>10</code> header byte allows extending functionality significantly without consuming a new top-level tag, preserving the core 2-bit tag structure of CTE.</li>
+<li class="[&amp;:not(:first-child)]:mt-2"><strong class="font-semibold">Varint (<code>SS=01</code>):</strong> Adopting ULEB128 and SLEB128 provides standard, efficient variable-length encodings for unsigned and signed integers, respectively. Including a direct representation for &#x27;0&#x27; (<code>EEEE=0000</code>) optimizes the most common default integer value.</li>
+<li class="[&amp;:not(:first-child)]:mt-2"><strong class="font-semibold">Fixed Types (<code>SS=10</code>):</strong> Directly encoding common fixed-width types (integers up to 64 bits, float, double) is often more convenient and potentially faster to decode than using variable-length encodings or the generic Command Data field for these types. Little-Endian is chosen as a common standard.</li>
+<li class="[&amp;:not(:first-child)]:mt-2"><strong class="font-semibold">Single-Byte Constants (<code>SS=11</code>):</strong> Allocating a dedicated sub-type for single-byte constants like <code>true</code> and <code>false</code> provides an unambiguous and highly efficient (1 byte) representation. This keeps the <code>SS=10</code> (Fixed Type) logic consistent (header always implies following data) and leaves room in <code>SS=11</code> for other markers (e.g., <code>null</code>, separators) if needed later.</li>
+</ul>
+<h2 id="backwards-compatibility" class="mt-12 mb-6 pt-8 text-2xl tracking-tight border-t-[1px] border-divider-light title_fb7eb">Backwards Compatibility<a class="link_a7cea header-anchor link_a9ef4 inline-link_f855c" aria-hidden="true" href="#backwards-compatibility">#</a></h2>
+<p class="my-4 leading-7">This proposal introduces new interpretations for the Tag <code>10</code> field based on the value of bits 1-0.</p>
+<ul class="list-disc pl-5 my-4 leading-7">
+<li class="[&amp;:not(:first-child)]:mt-2"><strong class="font-semibold">Partially Compatible:</strong> CTE processors compliant only with v1.0 will correctly interpret the <code>Legacy Index Reference</code> (<code>SS=00</code>) sub-type, as its format (<code>10 IIII 00</code>) remains unchanged.</li>
+<li class="[&amp;:not(:first-child)]:mt-2"><strong class="font-semibold">Incompatible:</strong> V1.0 processors will <strong class="font-semibold">not</strong> recognize or correctly decode data encoded using the new sub-types (<code>SS=01</code>, <code>SS=10</code>, <code>SS=11</code>). Encountering these formats will likely lead to parsing errors or data misinterpretation.</li>
+</ul>
+<p class="my-4 leading-7">Adoption of this LIP requires updating CTE processors to recognize and handle all four defined sub-types of the Tag <code>10</code> IxData Field. This change effectively defines <strong class="font-semibold">CTE v1.1</strong>.</p>
+<h2 id="security-considerations" class="mt-12 mb-6 pt-8 text-2xl tracking-tight border-t-[1px] border-divider-light title_fb7eb">Security Considerations<a class="link_a7cea header-anchor link_a9ef4 inline-link_f855c" aria-hidden="true" href="#security-considerations">#</a></h2>
+<ul class="list-disc pl-5 my-4 leading-7">
+<li class="[&amp;:not(:first-child)]:mt-2"><strong class="font-semibold">LEB128 Decoding (<code>SS=01</code>):</strong> Implementations decoding ULEB128 and SLEB128 must protect against potential resource exhaustion attacks. Maliciously crafted long sequences (many bytes with continuation bits set) could cause excessive CPU usage or memory allocation during decoding. Robust decoders should enforce limits on the number of bytes read for a single LEB128 value or check the magnitude of the partially decoded value against reasonable bounds (e.g., max 128 bits, or application-specific limits) related to the overall transaction size limit.</li>
+<li class="[&amp;:not(:first-child)]:mt-2"><strong class="font-semibold">Fixed Type Decoding (<code>SS=10</code>):</strong> Decoders must ensure sufficient bytes are available in the input buffer before attempting to read the data associated with a fixed type to prevent buffer over-reads. The required size is known directly from the <code>TTTT</code> code.</li>
+</ul>
+<h2 id="copyright" class="mt-12 mb-6 pt-8 text-2xl tracking-tight border-t-[1px] border-divider-light title_fb7eb">Copyright<a class="link_a7cea header-anchor link_a9ef4 inline-link_f855c" aria-hidden="true" href="#copyright">#</a></h2>
+<p class="my-4 leading-7">This LIP is licensed under the MIT License, in alignment with the main <a href="https://getlea.org" target="_blank" rel="noopener noreferrer" class="link_a7cea  link_a9ef4 inline-link_f855c">LEA Project</a> License.</p><!--/$--></div><div class="rspress-doc-footer"><footer class="mt-8"><div class="xs:flex pb-5 px-2 justify-end items-center"></div><div class="flex flex-col"></div><div class="flex flex-col sm:flex-row sm:justify-around gap-4 pt-6"><div class="prev_c92d1 flex flex-col"></div><div class="next_c11be flex flex-col"><a href="/lips/index.html" class="link_a7cea pager-link_e0d2d next_ad355"><span class="desc_dcc01">Next Page</span><span class="title_a3acb">LIPs Index</span></a></div></div></footer></div></div><div class="aside-container_bc5fa"><div class="flex flex-col"><div id="aside-container" class="relative text-sm font-medium"><div class="leading-7 block text-sm font-semibold pl-3">ON THIS PAGE</div><nav class="mt-1"><ul class="relative"><li><a href="#abstract" title="Abstract" class="aside-link transition-all duration-300 hover:text-text-1 text-text-2 block" style="margin-left:0;font-weight:semibold"><span class="aside-link-text block">Abstract</span></a></li><li><a href="#motivation" title="Motivation" class="aside-link transition-all duration-300 hover:text-text-1 text-text-2 block" style="margin-left:0;font-weight:semibold"><span class="aside-link-text block">Motivation</span></a></li><li><a href="#specification" title="Specification" class="aside-link transition-all duration-300 hover:text-text-1 text-text-2 block" style="margin-left:0;font-weight:semibold"><span class="aside-link-text block">Specification</span></a></li><li><a href="#43-index-and-extended-data-field-ixdata-field-tag-10" title="4.3. Index and Extended Data Field (IxData Field) (Tag 10)" class="aside-link transition-all duration-300 hover:text-text-1 text-text-2 block" style="margin-left:12px;font-weight:semibold"><span class="aside-link-text block">4.3. Index and Extended Data Field (IxData Field) (Tag <code>10</code>)</span></a></li><li><a href="#431-sub-type-00-legacy-index-reference" title="4.3.1. Sub-Type 00: Legacy Index Reference" class="aside-link transition-all duration-300 hover:text-text-1 text-text-2 block" style="margin-left:24px;font-weight:semibold"><span class="aside-link-text block">4.3.1. Sub-Type <code>00</code>: Legacy Index Reference</span></a></li><li><a href="#432-sub-type-01-variable-length-encoded-integer-varint" title="4.3.2. Sub-Type 01: Variable-Length Encoded Integer (Varint)" class="aside-link transition-all duration-300 hover:text-text-1 text-text-2 block" style="margin-left:24px;font-weight:semibold"><span class="aside-link-text block">4.3.2. Sub-Type <code>01</code>: Variable-Length Encoded Integer (Varint)</span></a></li><li><a href="#433-sub-type-10-fixed-data-type" title="4.3.3. Sub-Type 10: Fixed Data Type" class="aside-link transition-all duration-300 hover:text-text-1 text-text-2 block" style="margin-left:24px;font-weight:semibold"><span class="aside-link-text block">4.3.3. Sub-Type <code>10</code>: Fixed Data Type</span></a></li><li><a href="#434-sub-type-11-single-byte-constantmarker" title="4.3.4. Sub-Type 11: Single-Byte Constant/Marker" class="aside-link transition-all duration-300 hover:text-text-1 text-text-2 block" style="margin-left:24px;font-weight:semibold"><span class="aside-link-text block">4.3.4. Sub-Type <code>11</code>: Single-Byte Constant/Marker</span></a></li><li><a href="#rationale" title="Rationale" class="aside-link transition-all duration-300 hover:text-text-1 text-text-2 block" style="margin-left:0;font-weight:semibold"><span class="aside-link-text block">Rationale</span></a></li><li><a href="#backwards-compatibility" title="Backwards Compatibility" class="aside-link transition-all duration-300 hover:text-text-1 text-text-2 block" style="margin-left:0;font-weight:semibold"><span class="aside-link-text block">Backwards Compatibility</span></a></li><li><a href="#security-considerations" title="Security Considerations" class="aside-link transition-all duration-300 hover:text-text-1 text-text-2 block" style="margin-left:0;font-weight:semibold"><span class="aside-link-text block">Security Considerations</span></a></li><li><a href="#copyright" title="Copyright" class="aside-link transition-all duration-300 hover:text-text-1 text-text-2 block" style="margin-left:0;font-weight:semibold"><span class="aside-link-text block">Copyright</span></a></li></ul></nav></div></div></div></div></div></div></section></div>
+    <div id="search-container"></div>
+  </body>
+</html>

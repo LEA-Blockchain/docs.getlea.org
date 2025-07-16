@@ -1,0 +1,20 @@
+{
+  "name": "rspress",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "rspress dev",
+    "sync:lips": "rm -rf docs/lips && git clone --depth=1 https://github.com/LEA-Blockchain/lea-improvement-proposals.git docs/lips && rm -rf docs/lips/.git",
+    "build:lips": "node scripts/generate-lips-info.mjs",
+    "build:tools": "node scripts/generate-tools-docs.mjs",
+    "build:npm": "node scripts/generate-npm-docs.mjs",
+    "build": "npm run sync:lips && npm run build:lips && npm run build:tools && npm run build:npm && rspress build",
+    "preview": "rspress preview"
+  },
+  "dependencies": {
+    "rspress": "^1.40.2"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.17"
+  }
+}
