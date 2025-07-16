@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 
-const MODULES_DIR = path.join(process.cwd(), 'docs', 'npm-module');
+const MODULES_DIR = path.join(process.cwd(), 'docs-src', 'npm-module');
 const SOURCES_FILE = path.join(MODULES_DIR, 'sources.txt');
 const GEN_DIR = path.join(MODULES_DIR, 'generated');
 const RSPRESS_GEN_DIR = path.join(process.cwd(), '.rspress');

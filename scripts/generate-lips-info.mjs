@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 
-const LIPS_DIR = path.join(process.cwd(), 'docs', 'lips');
+const LIPS_DIR = path.join(process.cwd(), 'docs-src', 'lips');
 const GEN_DIR = path.join(process.cwd(), '.rspress');
 const SIDEBAR_OUTPUT_PATH = path.join(GEN_DIR, 'lips-sidebar.ts');
 const INDEX_OUTPUT_PATH = path.join(LIPS_DIR, 'index.md');

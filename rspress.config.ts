@@ -5,7 +5,8 @@ import { toolsSidebar } from './.rspress/tools-sidebar';
 import { npmSidebar } from './.rspress/npm-sidebar';
 
 export default defineConfig({
-  root: path.join(__dirname, 'docs'),
+  root: path.join(__dirname, 'docs-src'),
+  outDir: path.join(__dirname, 'docs'),
   title: 'LEA Chain',
   description: 'Technical Documentation for LEA Chain',
   icon: '/logo.png',

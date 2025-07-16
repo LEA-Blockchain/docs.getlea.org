@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 
-const TOOLS_DIR = path.join(process.cwd(), 'docs', 'tools');
+const TOOLS_DIR = path.join(process.cwd(), 'docs-src', 'tools');
 const SOURCES_FILE = path.join(TOOLS_DIR, 'sources.txt');
 const GEN_DIR = path.join(TOOLS_DIR, 'generated');
 const RSPRESS_GEN_DIR = path.join(process.cwd(), '.rspress');
