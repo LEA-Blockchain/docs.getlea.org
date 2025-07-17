@@ -60,13 +60,7 @@ const statusOrder = {
 
 const activeLips = lipsData
   .filter(lip => Object.keys(statusOrder).includes(lip.status))
-  .sort((a, b) => {
-    const statusDiff = (statusOrder[a.status] || 99) - (statusOrder[b.status] || 99);
-    if (statusDiff !== 0) {
-      return statusDiff;
-    }
-    return a.number - b.number;
-  });
+  .sort((a, b) => a.number - b.number);
 
 // --- Sidebar Generation ---
 
