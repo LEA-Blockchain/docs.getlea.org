@@ -3,6 +3,7 @@ import { defineConfig } from 'rspress/config';
 import { lipsSidebar } from './.rspress/lips-sidebar';
 import { toolsSidebar } from './.rspress/tools-sidebar';
 import { npmSidebar } from './.rspress/npm-sidebar';
+import { development } from './.rspress/development-sidebar';
 
 export default defineConfig({
   root: path.join(__dirname, 'docs-src'),
@@ -25,12 +26,7 @@ export default defineConfig({
       '/lips/': lipsSidebar,
       '/tools/': toolsSidebar,
       '/npm-module/': npmSidebar,
-      '/development/': [
-        {
-          text: 'Development',
-          link: '/development/',
-        },
-      ],
+      '/development/': development,
     },
     nav: [
       {
