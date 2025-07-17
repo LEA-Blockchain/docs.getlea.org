@@ -1,7 +1,8 @@
 {
-  "title": "NPM Module",
+  "title": "Tools",
   "entries": [
     "index",
+    "generated/lea-keygen",
     "generated/ltm"
   ]
 }
