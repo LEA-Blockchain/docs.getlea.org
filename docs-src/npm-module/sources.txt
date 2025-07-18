@@ -1,1 +1,1 @@
-https://raw.githubusercontent.com/LEA-Blockchain/ltm/refs/heads/main/MODULE_USAGE.md
+https://raw.githubusercontent.com/LEA-Blockchain/vm-shim/refs/heads/main/README.md
