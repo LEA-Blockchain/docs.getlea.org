@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "rspress dev",
-    "sync:lips": "rm -rf docs-src/lips && git clone --depth=1 https://github.com/LEA-Blockchain/lea-improvement-proposals.git docs-src/lips && rm -rf docs-src/lips/.git",
+    "sync:lips": "rimraf -rf docs-src/lips && git clone --depth=1 https://github.com/LEA-Blockchain/lea-improvement-proposals.git docs-src/lips && rimraf -rf docs-src/lips/.git",
     "build:lips": "node scripts/generate-lips-info.mjs",
     "build:tools": "node scripts/generate-tools-docs.mjs",
     "build:npm": "node scripts/generate-npm-docs.mjs",
@@ -13,6 +13,7 @@
     "preview": "rspress preview"
   },
   "dependencies": {
+    "rimraf": "^6.0.1",
     "rspress": "^1.40.2"
   },
   "devDependencies": {
